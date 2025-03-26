@@ -1,0 +1,51 @@
+{
+  "os": "Linux-5.15.0-102-generic-x86_64-with-glibc2.31",
+  "python": "CPython 3.11.8",
+  "startedAt": "2025-03-26T03:22:09.536875Z",
+  "args": [
+    "config/train_gpt2_2gpu.py"
+  ],
+  "program": "/home/ubuntu/projects/pretrainGPT2/train.py",
+  "codePath": "train.py",
+  "git": {
+    "remote": "git@github.com:jiangdi0924/pretrainGPT2.git",
+    "commit": "93a43d9a5c22450bbf06e78da2cb6eeef084b717"
+  },
+  "email": "jiangdi0924@gmail.com",
+  "root": "/home/ubuntu/projects/pretrainGPT2",
+  "host": "ubun",
+  "executable": "/home/ubuntu/anaconda3/envs/gpt2-pretraining/bin/python",
+  "codePathLocal": "train.py",
+  "cpu_count": 24,
+  "cpu_count_logical": 32,
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "gpu_count": 2,
+  "disk": {
+    "/": {
+      "total": "982820896768",
+      "used": "892994347008"
+    }
+  },
+  "memory": {
+    "total": "67166851072"
+  },
+  "cpu": {
+    "count": 24,
+    "countLogical": 32
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4090 D",
+      "memoryTotal": "25757220864",
+      "cudaCores": 14592,
+      "architecture": "Ada"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 4090 D",
+      "memoryTotal": "25757220864",
+      "cudaCores": 14592,
+      "architecture": "Ada"
+    }
+  ],
+  "cudaVersion": "12.4"
+}

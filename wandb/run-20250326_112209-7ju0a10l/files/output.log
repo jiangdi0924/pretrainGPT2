@@ -1,0 +1,134 @@
+step 0: train loss 10.9887, val loss 10.9915
+iter 0: loss 10.9831, time 12975.39ms, mfu -100.00%
+iter 10: loss 10.3307, time 1689.06ms, mfu 26.57%
+iter 20: loss 9.6772, time 1691.61ms, mfu 26.57%
+iter 30: loss 9.4435, time 1690.78ms, mfu 26.57%
+iter 40: loss 9.4083, time 1695.63ms, mfu 26.56%
+iter 50: loss 9.2151, time 1691.97ms, mfu 26.56%
+iter 60: loss 9.0315, time 1692.86ms, mfu 26.55%
+iter 70: loss 8.7528, time 1692.94ms, mfu 26.55%
+iter 80: loss 8.3824, time 1694.84ms, mfu 26.54%
+iter 90: loss 8.3022, time 1694.96ms, mfu 26.54%
+iter 100: loss 8.0024, time 1692.52ms, mfu 26.53%
+iter 110: loss 7.8571, time 1693.95ms, mfu 26.53%
+iter 120: loss 7.5036, time 1691.83ms, mfu 26.53%
+iter 130: loss 7.3674, time 1692.25ms, mfu 26.53%
+iter 140: loss 7.5006, time 1692.61ms, mfu 26.53%
+iter 150: loss 7.0772, time 1693.77ms, mfu 26.53%
+iter 160: loss 6.9949, time 1693.92ms, mfu 26.52%
+iter 170: loss 6.8382, time 1695.42ms, mfu 26.52%
+iter 180: loss 6.6350, time 1695.93ms, mfu 26.51%
+iter 190: loss 6.6930, time 1695.39ms, mfu 26.51%
+iter 200: loss 6.7020, time 1693.35ms, mfu 26.51%
+iter 210: loss 6.6871, time 1695.30ms, mfu 26.51%
+iter 220: loss 6.8242, time 1696.37ms, mfu 26.50%
+iter 230: loss 6.3875, time 1692.46ms, mfu 26.50%
+iter 240: loss 6.5562, time 1694.44ms, mfu 26.50%
+iter 250: loss 6.4544, time 1702.72ms, mfu 26.49%
+iter 260: loss 6.3876, time 1694.38ms, mfu 26.49%
+iter 270: loss 6.1060, time 1813.11ms, mfu 26.32%
+iter 280: loss 6.2386, time 1694.91ms, mfu 26.33%
+iter 290: loss 6.1806, time 1694.22ms, mfu 26.35%
+iter 300: loss 6.4159, time 1694.54ms, mfu 26.36%
+iter 310: loss 6.1096, time 1701.20ms, mfu 26.36%
+iter 320: loss 5.9791, time 1695.06ms, mfu 26.38%
+iter 330: loss 6.4251, time 1687.20ms, mfu 26.40%
+iter 340: loss 5.8145, time 1696.53ms, mfu 26.40%
+iter 350: loss 6.1193, time 1694.44ms, mfu 26.41%
+iter 360: loss 6.0613, time 1700.24ms, mfu 26.41%
+iter 370: loss 6.1445, time 1703.58ms, mfu 26.41%
+iter 380: loss 6.0795, time 1689.48ms, mfu 26.42%
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/pretrainGPT2/train.py", line 300, in <module>
+    logits, loss = model(X, Y)
+                   ^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/parallel/distributed.py", line 1593, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/parallel/distributed.py", line 1411, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/pretrainGPT2/model.py", line 181, in forward
+    x = block(x)
+        ^^^^^^^^
+  File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/pretrainGPT2/model.py", line 105, in forward
+    x = x + self.mlp(self.ln_2(x))
+                     ^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/pretrainGPT2/model.py", line 27, in forward
+    return F.layer_norm(input, self.weight.shape, self.weight, self.bias, 1e-5)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/functional.py", line 2573, in layer_norm
+    return torch.layer_norm(input, normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/ubuntu/projects/pretrainGPT2/train.py", line 300, in <module>
+[rank0]:     logits, loss = model(X, Y)
+[rank0]:                    ^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/parallel/distributed.py", line 1593, in forward
+[rank0]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/parallel/distributed.py", line 1411, in _run_ddp_forward
+[rank0]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/projects/pretrainGPT2/model.py", line 181, in forward
+[rank0]:     x = block(x)
+[rank0]:         ^^^^^^^^
+[rank0]:   File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/projects/pretrainGPT2/model.py", line 105, in forward
+[rank0]:     x = x + self.mlp(self.ln_2(x))
+[rank0]:                      ^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/projects/pretrainGPT2/model.py", line 27, in forward
+[rank0]:     return F.layer_norm(input, self.weight.shape, self.weight, self.bias, 1e-5)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/anaconda3/envs/gpt2-pretraining/lib/python3.11/site-packages/torch/nn/functional.py", line 2573, in layer_norm
+[rank0]:     return torch.layer_norm(input, normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: KeyboardInterrupt

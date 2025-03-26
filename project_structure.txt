@@ -1,0 +1,38 @@
+.
+└── pretrainGPT2/
+    └── LICENSE
+    └── README.md
+    └── assets/
+        ├── gpt2_124M_loss.png
+        ├── nanogpt.jpg
+    └── bench.py
+    └── config/
+        ├── eval_gpt2.py
+        ├── eval_gpt2_large.py
+        ├── eval_gpt2_medium.py
+        ├── eval_gpt2_xl.py
+        ├── finetune_shakespeare.py
+        ├── train_gpt2.py
+        ├── train_shakespeare_char.py
+    └── configurator.py
+    └── data/
+        ├── openwebtext/
+        │   ├── prepare.py
+        │   ├── readme.md
+        ├── shakespeare/
+        │   ├── prepare.py
+        │   ├── readme.md
+        ├── shakespeare_char/
+        │   └── input.txt
+        │   └── meta.pkl
+        │   └── prepare.py
+        │   └── readme.md
+        │   └── train.bin
+        │   └── val.bin
+    └── generate_project_structure.py
+    └── model.py
+    └── out-shakespeare-char/
+    └── sample.py
+    └── scaling_laws.ipynb
+    └── train.py
+    └── transformer_sizing.ipynb
